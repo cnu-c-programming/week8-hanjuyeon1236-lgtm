@@ -1,12 +1,19 @@
 #include <stdio.h>
-#include <string.h>
+
+void foo() {
+  char *str1 = "hello";
+  printf("%p\n", (void*)str1);
+}
+
+void bar() {
+  char *str2 = "hello";
+  printf("%p\n", (void*)str2);
+}
 
 int main() {
-  char *p = "hello";
-  char arr[] = "hello";
 
-  printf("%zu %zu\n", sizeof(p), strlen(p));
-  printf("%zu %zu\n", sizeof(arr), strlen(arr));
+  foo();
+  bar();
 
   return 0;
 }
